@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  font-family: cursive;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Top navigation bar */
+
+#contain {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-height: 200px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0.3125rem 0.625rem 1.865rem rgba(0, 0, 0, 0.02);
+  z-index: 1;
+}
+.toptext {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1%;
+}
+.pic img {
+  height: 49px;
+}
+.toptext li a {
+  height: 2.8125rem;
+  line-height: 281%;
+  margin: 20px;
+  padding: 0px 1.25rem;
+  font-size: 106%;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  display: flex;
+  font-weight: 550;
+  color: grey;
+  transition: all 0.6s ease;
+  text-decoration: none;
+}
+.toptext li a:hover {
+  background-color: #23cdaf;
+  color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  transition: all 0.8s ease;
+  letter-spacing: 2px;
+  box-shadow: 5px 10px 30px rgba(24, 139, 119, 0.2);
+}
+.image {
+  height: 40.75rem;
+  width: 27.25rem;
+}
+.image img {
+  width: 85%;
+  height: 100%;
+  object-fit: contain;
+}
+span a:hover {
+  color: rgb(255, 255, 255);
+}
+.sayhi {
+  border-radius: 50%;
+  font-weight: 600;
+  transition: all 0.8s ease;
+}
+.sayhi:hover {
+  background-color: #23cdaf;
+  border-radius: 100%;
+  padding: 10px;
+  transition: 0.9s;
+}
+.sayhi a {
+  text-decoration: none;
+  color: black;
+}
+/*for mobile screen reposiveness */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  nav {
+    font-size: 14px;
+  }
+  .toptext li a {
+    margin: 0;
+    padding: 4px;
+  }
+  .toptext li a:hover {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/* toggle side navbar*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(247, 247, 247);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  margin: 35px;
+  margin-right: 50px;
+  padding: 8px 8px 8px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  display: block;
+  transition: 0.4s;
+}
+
+.sidenav a:hover {
+  background-color: #1db096;
+  color: white;
+  margin-left: 50px;
+  margin-right: 40px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Main Content in center */
+
+.maincon {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+  right: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.text {
+  width: 31.25rem;
+  margin-right: 10%;
+}
+.text h1 {
+  font-size: 3em;
+  font-weight: 800;
+  color: #1c3548;
+  margin: 0px 0px 10px 0px;
+  line-height: 130%;
+}
+.text p {
+  color: grey;
+  font-weight: 700;
+  font-size: 120%;
+}
+.button {
+  width: 12.5rem;
+  height: 2.8125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #1db096;
+  border-radius: 20px;
+  transition: all 0.8s ease;
+  font-weight: 700;
+  box-shadow: 5px 10px 30px rgba(24, 139, 119, 0.2);
+}
+.button:hover {
+  background-color: #23cdaf;
+  color: white;
+  width: 260px;
+  transition: all ease 0.5s;
+  letter-spacing: 4px;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .text h1 {
+    font-size: 2em;
+  }
+  .text p {
+    font-size: 100%;
+  }
+}
+/*skills */
+.skills {
+  margin-top: 25%;
+  margin-bottom: 20%;
+}
+/* project text animation */
+
+#project-check {
+  background-color: blanchedalmond;
+  margin-left: 20%;
+  margin-right: 20%;
+  animation-name: myanime;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: 0.5s;
+}
+
+@keyframes myanime {
+  0% {
+    background-color: #1db096;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: white;
+  }
+  100% {
+    background-color: #23cdaf;
+    margin-left: 30%;
+    margin-right: 30%;
+    color: white;
+  }
+}
+
+/* corousel design */
+
+.my-corousel {
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#project-check {
+  margin-top: 350px;
+}
+.project-image {
+  width: 100%;
+}
+
+/*modal*/
+.modal-header {
+  background-color: #23cdaf;
+  color: white;
+}
+.modal-footer {
+  background-color: #f2faf8;
+}
+@media screen and (max-width: 450px) {
+  .text h1 {
+    font-size: 20px;
+  }
+}
+/*contact now*/
+#contacts {
+  margin-bottom: 5%;
+}
+footer {
+  margin-bottom: 50px;
+}
