@@ -99,8 +99,14 @@ span a:hover {
     padding: 4px;
   }
   .toptext li a:hover {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .sayhi {
+    margin-right: 15%;
+  }
+  .pic {
+    margin-left: 5%;
   }
 }
 /* toggle side navbar*/
@@ -209,6 +215,13 @@ span a:hover {
   .text p {
     font-size: 100%;
   }
+  .button {
+    width: 8rem;
+  }
+  .button:hover {
+    width: 10rem;
+    letter-spacing: 1px;
+  }
 }
 /*skills */
 .skills {
@@ -265,15 +278,22 @@ span a:hover {
 .modal-footer {
   background-color: #f2faf8;
 }
-@media screen and (max-width: 450px) {
-  .text h1 {
-    font-size: 20px;
-  }
-}
+
 /*contact now*/
 #contacts {
   margin-bottom: 5%;
 }
 footer {
   margin-bottom: 50px;
+}
+@media screen and (max-width: 450px) {
+  .text h1 {
+    font-size: 20px;
+  }
+  #project-check {
+    margin-top: 60%;
+  }
+  .row {
+    padding-right: 40%;
+  }
 }
